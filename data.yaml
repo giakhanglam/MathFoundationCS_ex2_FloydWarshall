@@ -1,0 +1,123 @@
+# Location records
+- 
+  id: 0
+  desc: "Truong DH Bach Khoa"
+  linked_vertices:
+    - 
+      id: 5
+      weight: 1.5
+    - 
+      id: 9
+      weight: 0.35
+
+
+- 
+  id: 1
+  desc: "Dinh Doc Lap"
+  linked_vertices:
+    - 
+      id: 8
+      weight: 0.9
+
+
+-
+  id: 2
+  desc: "Ben Nha Rong"
+
+
+-
+  id: 3
+  desc: "Thao Cam Vien"
+
+
+- 
+  id: 4
+  desc: "Nga tu Hang Xanh"
+
+  
+-
+  id: 5
+  desc: "Nga ba To Hien Thanh - CMT8"
+  linked_vertices:
+    -
+      id: 0
+      weight: 1.5
+    - 
+      id: 6
+      weight: 1.2
+
+-
+  id: 6
+  desc: "Nga 6 Dan Chu"
+  linked_vertices:
+    - 
+      id: 5
+      weight: 1.2
+    - 
+      id: 7
+      weight: 0.3
+
+
+-
+  id: 7
+  desc: "Nga tu CMT8 - ĐBP"
+  linked_vertices:
+    - 
+      id: 6
+      weight: 0.3
+    - 
+      id: 8
+      weight: 1.1
+
+-
+  id: 8
+  desc: "Nga tu ĐBP - Nam Ky Khoi Nghia"
+  linked_vertices:
+    - 
+      id: 1
+      weight: 0.9
+    -
+      id: 7
+      weight: 1.1
+
+-
+  id: 9
+  desc: "Nga tu To Hien Thanh - Thanh Thai"
+  linked_vertices:
+    -
+      id: 0
+      weight: 0.35
+    -
+      id: 10
+      weight: 1.0
+
+-
+  id: 10
+  desc: "Cau vuot 3/2 - Nguyen Tri Phuong"
+  linked_vertices:
+    -
+      id: 9
+      weight: 1.0
+    -
+      id: 11
+      weight: 0.12
+
+-
+  id: 11
+  desc: "Nut giao 3/2 - Ly Thai To"
+  linked_vertices:
+    -
+      id: 10
+      weight: 0.12
+    -
+      id: 12
+      weight: 0.7
+
+-
+  id: 12
+  desc: "Vong xoay nga 7 Ly Thai To"
+  linked_vertices:
+    -
+      id: 8
+      weight: 2.6
+    
