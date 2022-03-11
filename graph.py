@@ -1,5 +1,5 @@
-# from typing import Dict, Union, List, Iterable
 import numpy as np
+from utils import log, DEBUG
 
 class Vertex:
     def __init__(self, id: int, desc: str):
@@ -18,11 +18,12 @@ class Vertex:
 
 
 class UndirectedWeightedGraph:
+    INF = np.inf
 
     def __init__(self, size):
         self.adj_mat = []
         for i in range(size):
-            self.adj_mat.append([0 for i in range(size)])
+            self.adj_mat.append([self.INF for i in range(size)])
         self._size = size
         self.vertices_lst = []
         self._num_vertices = 0
@@ -52,38 +53,30 @@ class UndirectedWeightedGraph:
         if self.num_vertices < self.Size:
             if self.find_vertex(v.id) is None:
                 self.vertices_lst.append(v)
+                self.adj_mat[v.id][v.id] = 0    # no weight between a vertex and itself
                 self.num_vertices += 1
             else:
-                print("Vertex ID = {} already existed.".format(v.id))
+                log("Vertex ID = {} already existed. Aborted adding vertex!".format(v.id))
         else:
-            print("Reach maximum number of vertices {}. Abort!".format(self.Size))
+            log("Reach maximum number of vertices {}. Aborted adding vertex!".format(self.Size))
 
 
     def add_edge(self, v1: Vertex, v2: Vertex, weight: int):
         if v1.id == v2.id:
-            print("Same vertex id={}. Abort!".format(v1.id))
+            log("Same vertex id={}. Aborted adding egde!".format(v1.id))
         elif self.adj_mat[v1.id][v2.id] == weight:
-            print("Edge between vetices id={} and id={} already existed. Abort!".format(v1.id, v2.id))
+            log("Edge between vetices id={} and id={} already existed. Abort!".format(v1.id, v2.id))
         else:
             self.adj_mat[v1.id][v2.id] = weight
             self.adj_mat[v2.id][v1.id] = weight
             self.num_edges += 1
 
     def print_graph(self):
-        # for row in self.adj_mat:
-        #     for val in row:
-        #         print("{:4}".format(val))
         print(np.array(self.adj_mat))
 
     def print_vertices(self):
         for v in self.vertices_lst:
             print(v, end='\n')
-
-    def is_vertex_existed(self, vertex_ID: int):
-        for v in self.vertices_lst:
-            if v.id == vertex_ID:
-                return True
-        return False
 
     def find_vertex(self, vertex_ID: int):
         for v in self.vertices_lst:

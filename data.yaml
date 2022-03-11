@@ -2,7 +2,7 @@
 - 
   id: 0
   desc: "Truong DH Bach Khoa"
-  linked_vertices:
+  adjacent_list:
     - 
       id: 5
       weight: 1.5
@@ -10,11 +10,11 @@
       id: 9
       weight: 0.35
 
-
+######## 4 destinations ########
 - 
   id: 1
   desc: "Dinh Doc Lap"
-  linked_vertices:
+  adjacent_list:
     - 
       id: 8
       weight: 0.9
@@ -33,12 +33,13 @@
 - 
   id: 4
   desc: "Nga tu Hang Xanh"
+######## 4 destinations ########
 
   
 -
   id: 5
   desc: "Nga ba To Hien Thanh - CMT8"
-  linked_vertices:
+  adjacent_list:
     -
       id: 0
       weight: 1.5
@@ -49,7 +50,7 @@
 -
   id: 6
   desc: "Nga 6 Dan Chu"
-  linked_vertices:
+  adjacent_list:
     - 
       id: 5
       weight: 1.2
@@ -61,7 +62,7 @@
 -
   id: 7
   desc: "Nga tu CMT8 - ĐBP"
-  linked_vertices:
+  adjacent_list:
     - 
       id: 6
       weight: 0.3
@@ -72,18 +73,21 @@
 -
   id: 8
   desc: "Nga tu ĐBP - Nam Ky Khoi Nghia"
-  linked_vertices:
+  adjacent_list:
     - 
       id: 1
       weight: 0.9
     -
       id: 7
       weight: 1.1
+    -
+      id: 12
+      weight: 2.6
 
 -
   id: 9
   desc: "Nga tu To Hien Thanh - Thanh Thai"
-  linked_vertices:
+  adjacent_list:
     -
       id: 0
       weight: 0.35
@@ -94,7 +98,7 @@
 -
   id: 10
   desc: "Cau vuot 3/2 - Nguyen Tri Phuong"
-  linked_vertices:
+  adjacent_list:
     -
       id: 9
       weight: 1.0
@@ -105,7 +109,7 @@
 -
   id: 11
   desc: "Nut giao 3/2 - Ly Thai To"
-  linked_vertices:
+  adjacent_list:
     -
       id: 10
       weight: 0.12
@@ -116,8 +120,11 @@
 -
   id: 12
   desc: "Vong xoay nga 7 Ly Thai To"
-  linked_vertices:
+  adjacent_list:
     -
       id: 8
       weight: 2.6
+    -
+      id: 11
+      weight: 0.7
     
